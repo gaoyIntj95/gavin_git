@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --ui-control-h: 44px;
+    --ui-title-size: 24px;
+    --ui-sub-size: 14px;
+    --ui-body-size: 14px;
+    --ui-radius: 8px;
+    --ui-page-min-h: calc(100vh - 220px);
+  }
+
+  body {
+    margin: 0;
+    font-family: "Microsoft YaHei", "PingFang SC", "Segoe UI", sans-serif;
+    color: #0f172a;
+    background: #f4f8ff;
+  }
+}
+
+@layer components {
+  .field {
+    @apply w-full border border-slate-300 bg-white px-3 outline-none transition focus:border-blue-400;
+    height: var(--ui-control-h);
+    border-radius: var(--ui-radius);
+    font-size: var(--ui-body-size);
+  }
+
+  .primary {
+    @apply border border-blue-600 bg-blue-600 px-4 font-medium text-white transition hover:bg-blue-700;
+    height: var(--ui-control-h);
+    border-radius: var(--ui-radius);
+    font-size: var(--ui-body-size);
+  }
+
+  .secondary {
+    @apply border border-blue-300 bg-white px-4 font-medium text-blue-700 transition hover:bg-blue-50;
+    height: var(--ui-control-h);
+    border-radius: var(--ui-radius);
+    font-size: var(--ui-body-size);
+  }
+
+  .surface-card {
+    @apply overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_8px_24px_rgba(15,23,42,0.08)] transition;
+  }
+
+  .surface-card:hover {
+    @apply -translate-y-0.5 shadow-[0_12px_28px_rgba(15,23,42,0.12)];
+  }
+
+  .surface-head {
+    @apply flex items-center gap-3 bg-gradient-to-r from-[#0f4ea2] to-[#1567c8] px-5 py-4 text-white;
+  }
+
+  .surface-head-title {
+    @apply font-bold;
+    font-size: 20px;
+  }
+
+  .surface-head-sub {
+    @apply mt-0.5 text-blue-100/90;
+    font-size: 12px;
+  }
+
+  .surface-icon {
+    @apply inline-grid h-7 w-7 place-items-center rounded-full bg-white/20 text-xs;
+  }
+
+  .surface-body {
+    @apply p-5;
+  }
+
+  .hint-box {
+    @apply rounded-xl border border-blue-100 bg-blue-50 px-4 py-3 text-sm text-blue-900;
+  }
+
+  .result-box {
+    @apply min-h-[180px] rounded-xl border border-slate-200 bg-slate-50 p-4 font-mono text-xs leading-6 text-slate-700;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  .tab-button {
+    @apply border px-4 font-medium transition;
+    height: var(--ui-control-h);
+    border-radius: var(--ui-radius);
+    font-size: var(--ui-body-size);
+  }
+
+  .page-view {
+    @apply w-full min-w-0;
+    min-height: var(--ui-page-min-h);
+  }
+}

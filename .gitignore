@@ -1,0 +1,17 @@
+**/.env
+**/.env.*
+!**/.env.example
+**/node_modules/
+**/dist/
+**/venv/
+**/.venv/
+**/__pycache__/
+**/.pytest_cache/
+**/*.pyc
+**/*.log
+**/*.db
+**/*.sqlite*
+**/*.tar
+**/runtime/
+**/.idea/
+**/.vscode/
